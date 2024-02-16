@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <!--jQuery-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+            let html;
+            $(document).ready(function(){
+                $.ajax({
+                    url:'http://http://ec2-3-108-196-161.ap-south-1.compute.amazonaws.com/profile?id=1',
+                    success:function(data){
+                        html=datadisplay_html()
+                    }
+                })
+            })
+            function display_html(){
+                $('body').append(html)
+                $(".col-lg-4").remove()
+                $(".col-lg-8").removeClass("col-lg-8").addClass("col-lg-12")
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
